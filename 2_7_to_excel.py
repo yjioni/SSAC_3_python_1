@@ -50,4 +50,5 @@ save_name = filedialog.asksaveasfilename(title='save as...',
                                          filetypes=(('excel files', '*.xlsx'),
                                                     ('all files', '*.*'))
                                         )
+# sample_append.to_excel(save_name, index=True)
 sample_append.to_excel(save_name, index=False)
