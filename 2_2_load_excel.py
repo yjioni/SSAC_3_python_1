@@ -1,6 +1,16 @@
 import pandas as pd
 
-sample_1 = pd.read_excel('C:/Users/oing9/Desktop/Yulia/SSAC_3/web_crawling/datasalon-master/02_개정판/2_Data_Analysis_Basic/files/sample_1.xlsx',
+from tkinter import *
+from tkinter import filedialog
+
+root = Tk()
+file_name = filedialog.askopenfilename(title='choose an excel file',
+                                initialdir='C:/Users',
+                                filetypes=(('excel files', '*.xlsx'),
+                                            ('all files', '*.*')
+                                           )
+                                        )
+sample_1 = pd.read_excel(file_name,
                          header=1, skipfooter=2,
                          usecols='A:C')
 print(sample_1.info())
